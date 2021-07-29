@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "./index.css";
+import Header from "./components/Header";
+import About from "./components/Login";
+import Resume from "./components/Profile";
+import Contact from "./components/Create";
+import Portfolio from "./components/Project";
+import Footer from "./components/Footer";
+
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
+  const [page, setPage] = useState("about");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ backgroundColor: "aliceblue" }}>
+      <Header page={page} setPage={setPage} />
+      {page === "about" && <About />}
+      {page === "contact" && <Contact />}
+      {page === "resume" && <Resume />}
+      {page === "portfolio" && <Portfolio />}
+      <Footer />
     </div>
   );
 }
