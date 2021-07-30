@@ -11,12 +11,13 @@ import Footer from "./components/Footer";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { useState } from "react";
 
-function App() {
+function App({ match }) {
   const [page, setPage] = useState("landing");
+  console.log(window.location);
   return (
     <BrowserRouter>
-      <div style={{ backgroundColor: "aliceblue" }}>
-        <Header page={page} setPage={setPage} />
+      {window.location.pathname !== "/" && <Header />}
+      <div style={{ backgroundColor: "aliceblue", height: "100%" }}>
         <Route path="/about" component={About} />
         <Route path="/create" component={Create} />
         <Route path="/login" component={Login} />
@@ -25,8 +26,8 @@ function App() {
         {/* {page === "create" && <Create />}
         {page === "login" && <Login />}
         {page === "landing" && <Landing />} */}
-        <Footer />
       </div>
+      {window.location.pathname !== "/" && <Footer />}
     </BrowserRouter>
   );
 }

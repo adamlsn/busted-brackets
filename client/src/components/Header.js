@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Header({ page, setPage }) {
+function Header() {
   const styles = {
     navItem: {
       display: "inline-block",
