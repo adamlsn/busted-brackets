@@ -6,9 +6,17 @@ const bracketSchema = new Schema({
             type: String,
         },
     ],
+        creator: {
+            type: String,
+            require: true,
+        },
         createdAt: {
             type: Date,
             default: Date.now
+        },
+        username: {
+            type: String,
+            required: true,
         },
         seed:  {
             type: Integer,
@@ -25,8 +33,19 @@ const bracketSchema = new Schema({
         round: {
             type: Integer,
             required: true,
+        }, 
+        group: {
+            type: Integer,
+            required: true,
         }
     
-});
+,
+}, 
+{
+    toJSON: {
+        virtuals: true,
+    }
+}
+);
 
 module.exports = bracketSchema;
