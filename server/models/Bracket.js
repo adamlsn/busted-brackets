@@ -6,6 +6,10 @@ const bracketSchema = new Schema({
             type: String,
         },
     ],
+        bracketLevel: {
+            type: String,
+            require: true,
+        },
         creator: {
             type: String,
             require: true,
@@ -13,10 +17,6 @@ const bracketSchema = new Schema({
         createdAt: {
             type: Date,
             default: Date.now
-        },
-        username: {
-            type: String,
-            required: true,
         },
         seed:  {
             type: Integer,
