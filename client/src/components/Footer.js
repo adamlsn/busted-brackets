@@ -1,18 +1,10 @@
-import Project from "./Project";
+// import Project from "./Project";
 import Social from "./Social";
 
 const links = [
   {
     URL: "Github",
-    link: "https://github.com/mspierings96",
-  },
-  {
-    URL: "Stack Overflow",
-    link: "https://stackoverflow.com/users/14948647/mspierings96",
-  },
-  {
-    URL: "Linkedin",
-    link: "https://www.linkedin.com/in/mitchell-s-153a06117/",
+    link: "https://github.com/adamlsn/busted-brackets",
   },
 ];
 

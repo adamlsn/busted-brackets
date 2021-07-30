@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Header({ page, setPage }) {
   const styles = {
     navItem: {
@@ -9,39 +11,19 @@ function Header({ page, setPage }) {
   };
   return (
     <div className="header">
-      <h1>Mitchell Spierings</h1>
+      <h1>Busted Brackets</h1>
       <nav style={{ width: "19%" }}>
         <div style={styles.navItem}>
-          <btn
-            onClick={() => setPage("about")}
-            className={page === "about" && "active"}
-          >
-            About Me
-          </btn>
+          <Link to="/about">About</Link>
         </div>
         <div style={styles.navItem}>
-          <btn
-            onClick={() => setPage("portfolio")}
-            className={page === "portfolio" && "active"}
-          >
-            Portfolio
-          </btn>
+          <Link to="/profile">Profile</Link>
         </div>
         <div style={styles.navItem}>
-          <btn
-            onClick={() => setPage("contact")}
-            className={page === "contact" && "active"}
-          >
-            Contact
-          </btn>
+          <Link to="/create">Create</Link>
         </div>
         <div style={styles.navItem}>
-          <btn
-            onClick={() => setPage("resume")}
-            className={page === "resume" && "active"}
-          >
-            Resume
-          </btn>
+          <Link to="/login">Login</Link>
         </div>
       </nav>
     </div>

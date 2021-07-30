@@ -1,26 +1,33 @@
 import "./App.css";
 import "./index.css";
 import Header from "./components/Header";
-import About from "./components/Login";
-import Resume from "./components/Profile";
-import Contact from "./components/Create";
-import Portfolio from "./components/Project";
+import About from "./components/About";
+import Create from "./components/Create";
+import Login from "./components/Login";
+import Landing from "./components/Landing";
+// import Portfolio from "./components/Portfolio";
 import Footer from "./components/Footer";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { useState } from "react";
 
 function App() {
-  const [page, setPage] = useState("about");
+  const [page, setPage] = useState("landing");
   return (
-    <div style={{ backgroundColor: "aliceblue" }}>
-      <Header page={page} setPage={setPage} />
-      {page === "about" && <About />}
-      {page === "contact" && <Contact />}
-      {page === "resume" && <Resume />}
-      {page === "portfolio" && <Portfolio />}
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div style={{ backgroundColor: "aliceblue" }}>
+        <Header page={page} setPage={setPage} />
+        <Route path="/about" component={About} />
+        <Route path="/create" component={Create} />
+        <Route path="/login" component={Login} />
+        <Route path="/" component={Landing} exact />
+
+        {/* {page === "create" && <Create />}
+        {page === "login" && <Login />}
+        {page === "landing" && <Landing />} */}
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
