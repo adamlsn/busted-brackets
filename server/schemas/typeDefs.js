@@ -22,7 +22,7 @@ type Bracket {
     seed: Int
     teams: String
     round: Int
-    group: Int
+    
     title: String
 }`
 

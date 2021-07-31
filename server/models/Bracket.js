@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, Mongoose } = require('mongoose');
 
 const bracketSchema = new Schema({
         title: {
@@ -32,14 +32,9 @@ const bracketSchema = new Schema({
         round: {
             type: Number,
             required: true,
-        }, 
-        group: {
-            type: Number,
-            required: true,
         }
-    
-,
-}, 
+
+},
 {
     toJSON: {
         virtuals: true,
