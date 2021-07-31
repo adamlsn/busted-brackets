@@ -24,10 +24,7 @@ type Bracket {
     teams: String
     round: Int
     title: String
-    group: [{
-        teamOne: { type: String },
-        teamTwo: { type: String}
-    }]
+    group: [String]
 }`
 
 

@@ -8,8 +8,11 @@ db.once('open', async () => {
 
   // create user data
   const bracketData = [];
+  
 
   for (let i = 0; i < 5; i += 1) {
+    const group = [];
+
     const creator = faker.internet.userName();
     const title = faker.random.word();
     const bracketLevel = 'Master';
@@ -18,8 +21,9 @@ db.once('open', async () => {
     const id = 2;
     const teams = faker.company.companyName();
     const round = 3;
-    const group = [{teamOne: faker.commerce.productName()}, {teamTwo: faker.commerce.productName()}]
-
+    const teamOne = faker.commerce.productName();
+    const teamTwo = faker.commerce.productName();
+    group.push(teamOne, teamTwo)
 
     bracketData.push({ creator, title, bracketLevel, createdAt, seed, id, teams, round, group });
   }

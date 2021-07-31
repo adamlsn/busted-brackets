@@ -34,9 +34,8 @@ const bracketSchema = new Schema({
             required: true,
         },
         group: {
-            array: []
+            type: Array
         }
-
 },
 {
     toJSON: {
