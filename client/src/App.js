@@ -1,25 +1,38 @@
-import { ApolloProvider,ApolloClient,InMemoryCache,createHTTPLink } from '@apollo/client';
+import React from 'react';
+import { BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+import { ApolloProvider } from '@apollo/react-hooks';
+import ApolloClient from 'apollo-boost';
+
 import Footer from './components/Footer';
 import Header from './components/Header';
 
-const httpLink = createHttpLink({
-  uri: 'http://localhost:3001/graphql',
-});
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Profile from './pages/Profile';
+import Signup from './pages/Signup'
 
 const client = new ApolloClient({
-  link: httpLink,
-  cache: new InMemoryCache(),
-});
+  uri:'/graphql'
+})
+
+
 function App() {
   return (
   <ApolloProvider client={client}>
+    <Router>
     <div>
       <Header/>
-      <div>
-        Home content
+      <div className="container">
+        <Switch>
+       <Route exact path="/" component={Home} />
+       <Route exact path="/login" component={Login}/>
+       <Route exact path="/signup" component={Signup}/>
+       <Route exact path="/profile/:username?" component={Profile}/>
+        </Switch>
       </div>
       <Footer/>
     </div>
+    </Router>
   </ApolloProvider>
   );
 }
