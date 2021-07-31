@@ -18,10 +18,10 @@ db.once('open', async () => {
     const id = 2;
     const teams = faker.company.companyName();
     const round = 3;
-    //const group = [{teamOne: faker.commerce.productName()}, {teamTwo: faker.commerce.productName()}]
+    const group = [{teamOne: faker.commerce.productName()}, {teamTwo: faker.commerce.productName()}]
 
 
-    bracketData.push({ creator, title, bracketLevel, createdAt, seed, id, teams, round });
+    bracketData.push({ creator, title, bracketLevel, createdAt, seed, id, teams, round, group });
   }
 
   const createdBracket = await Bracket.collection.insertMany(bracketData);
