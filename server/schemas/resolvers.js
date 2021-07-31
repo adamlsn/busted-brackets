@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 const { User } = require('../models');
 const { AuthenticationError } = require('apollo-server-express');
 const { signToken } = require('../utils/auth');
 
+=======
+const { User, Bracket } = require('../models')
+>>>>>>> 99d1700e5fee046fb5c3d40bc2364b3b3c92014d
 
 const resolvers = {
     Query:{
@@ -21,6 +25,9 @@ const resolvers = {
       user:async (parent,{username})=>{
           return User.findOne({username})
           .select('-__v -password');
+      },
+      bracket:async ()=>{
+          return Bracket.find()
       }
     },
     Mutation:{
