@@ -25,8 +25,6 @@ db.once('open', async () => {
     const teamTwo = faker.commerce.productName();
     group.push(teamOne, teamTwo)
 
-    console.log(teamOne, teamTwo)
-
     bracketData.push({ creator, title, bracketLevel, createdAt, seed, id, teams, round, group });
   }
 
