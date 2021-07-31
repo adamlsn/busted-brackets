@@ -1,11 +1,10 @@
 const { Schema, model } = require('mongoose');
 
 const bracketSchema = new Schema({
-    title: [
-        {
+        title: {
             type: String,
+            require: true,
         },
-    ],
         bracketLevel: {
             type: String,
             require: true,
