@@ -1,13 +1,81 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+#root {
+  --primary-color: #c9d5b5;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  padding: 20px 35px;
+  background-color: #4e3d42;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header nav {
+  margin: 7px 0;
+}
+
+.header h1 {
+  font-weight: bold;
+  font-size: 36px;
+  color: var(--primary-color);
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer {
+  background: var(--primary-color);
+  padding: 40px 35px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.footer h2 {
+  color: #000000;
+  font-size: 12px;
+  margin: 0;
+}
+
+footer div {
+  line-height: 1.5;
+  text-align: right;
+}
+/* FOOTER STYLES END */
+
+.pageHeader {
+  font-size: 70px;
+  text-align: center;
+  color: cornflowerblue;
+}
+
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1573487482166-09cd477f7b3b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=562&q=80");
+  height: 800px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button-hero > a {
+  background-color: white;
+  border: 2px solid yellow;
+  padding: 10px 20px;
+  color: black;
+  margin: 10px;
 }
