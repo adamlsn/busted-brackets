@@ -1,4 +1,4 @@
-const { Schema } = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 const bracketSchema = new Schema({
     title: [
@@ -19,11 +19,11 @@ const bracketSchema = new Schema({
             default: Date.now
         },
         seed:  {
-            type: Integer,
+            type: Number,
             required: false,
         }, 
         id: {
-            type: Integer,
+            type: Number,
             required: true,
         },
         teams: {
@@ -31,11 +31,11 @@ const bracketSchema = new Schema({
             required: true,
         },
         round: {
-            type: Integer,
+            type: Number,
             required: true,
         }, 
         group: {
-            type: Integer,
+            type: Number,
             required: true,
         }
     
@@ -48,4 +48,6 @@ const bracketSchema = new Schema({
 }
 );
 
-module.exports = bracketSchema;
+const Bracket = model('Bracket', bracketSchema);
+
+module.exports = Bracket;

@@ -11,7 +11,7 @@ const resolvers = {
           .select('-__v -password');
       },
       bracket:async ()=>{
-          return Bracket.findAll()
+          return Bracket.find()
       }
     }
 }
