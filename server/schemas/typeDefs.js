@@ -5,8 +5,7 @@ type Query {
     me: User
     users:[User]
     user(username: String!): User
-    bracket(title: String): [Bracket!]
-    
+    bracket(title: String): [Bracket!]    
 }
 type User {
     _id:ID
@@ -14,7 +13,6 @@ type User {
     email:String
     brackets: [Bracket]
 }
-
 type Bracket {
     _id: ID
     bracketLevel: String,
@@ -25,6 +23,12 @@ type Bracket {
     round: Int
     title: String
     group: [String]
+}
+type Auth {
+    token: ID!
+    user: User
+}
+type Mutation {
 }`
 
 
