@@ -1,10 +1,12 @@
+const { Schema, model } = require('mongoose');
 const { User } = require('../models');
 
 const { signToken } = require('../utils/auth');
 
-module.exports = {
-    // get a signle user
-    async getSingleUser({ user = null, params }, res) {
+const UserSchema = new Schema(
+    {
+            // get a signle user
+    getSingleUser({ user = null, params }, res) {
         const foundUser = await User.findOne({
             $or: [{_id: user? user._id : params.id }, { username: params.username }],
         });
@@ -15,7 +17,7 @@ module.exports = {
         res.json(foundUser);
     },
     // create a user
-    async createUser({ body }, res) {
+    createUser({ body }, res) {
         const user = await User.create(body);
 
         if (!user) {
@@ -25,7 +27,7 @@ module.exports = {
         res.json({ token, user })
     },
     // login user, sign a token and send it back
-    async login({ body }, res) {
+    login({ body }, res) {
         const user = await User.findOne({ $or: [{ username: body.username }, { email: body.email }] });
         if (!user) {
             return res.status(400).json({ message: "Can't find this user" });
@@ -41,4 +43,9 @@ module.exports = {
 
     }
 
-}
+    }
+)
+
+const User = model("User", UserSchema)
+
+module.exports = User;
