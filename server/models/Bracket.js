@@ -1,13 +1,15 @@
-const { Schema } = require('mongoose');
+const { Schema, model, Mongoose } = require('mongoose');
 
 const bracketSchema = new Schema({
-    title: [
-        {
+        title: {
             type: String,
             require: true,
             unique: true
         },
-    ],
+        bracketLevel: {
+            type: String,
+            require: true,
+        },
         creator: {
             type: String,
             require: true,
@@ -16,16 +18,12 @@ const bracketSchema = new Schema({
             type: Date,
             default: Date.now
         },
-        username: {
-            type: String,
-            required: true,
-        },
         seed:  {
-            type: Integer,
+            type: Number,
             required: false,
         }, 
         id: {
-            type: Integer,
+            type: Number,
             required: true,
             unique: true
         },
@@ -34,16 +32,13 @@ const bracketSchema = new Schema({
             required: true,
         },
         round: {
-            type: Integer,
+            type: Number,
             required: true,
-        }, 
+        },
         group: {
-            type: Integer,
-            required: true,
+            type: Array
         }
-    
-,
-}, 
+},
 {
     toJSON: {
         virtuals: true,
@@ -51,4 +46,6 @@ const bracketSchema = new Schema({
 }
 );
 
-module.exports = bracketSchema;
+const Bracket = model('Bracket', bracketSchema);
+
+module.exports = Bracket;
