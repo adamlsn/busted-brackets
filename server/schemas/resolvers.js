@@ -1,4 +1,5 @@
-const { User } = require('../models')
+const { User, Bracket } = require('../models')
+
 const resolvers = {
     Query:{
       users:async () => {
@@ -8,6 +9,9 @@ const resolvers = {
       user:async (parent,{username})=>{
           return User.findOne({username})
           .select('-__v -password');
+      },
+      bracket:async ()=>{
+          return Bracket.findAll()
       }
     }
 }
