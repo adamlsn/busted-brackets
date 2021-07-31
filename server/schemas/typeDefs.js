@@ -12,18 +12,6 @@ type User {
     _id:ID
     username:String
     email:String
-<<<<<<< HEAD
-}
-type Auth {
-    token: ID!
-    user: User
-}
-type Mutation {
-    login(email:String!,password:String!): Auth
-    createUser(username:String!,email:String!,password:String!): Auth
-}
-`;
-=======
     brackets: [Bracket]
 }
 
@@ -42,6 +30,5 @@ type Bracket {
     }]
 }`
 
->>>>>>> 99d1700e5fee046fb5c3d40bc2364b3b3c92014d
 
 module.exports = typeDefs;
