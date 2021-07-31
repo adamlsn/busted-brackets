@@ -4,6 +4,8 @@ const bracketSchema = new Schema({
     title: [
         {
             type: String,
+            require: true,
+            unique: true
         },
     ],
         creator: {
@@ -25,6 +27,7 @@ const bracketSchema = new Schema({
         id: {
             type: Integer,
             required: true,
+            unique: true
         },
         teams: {
             type: String,
