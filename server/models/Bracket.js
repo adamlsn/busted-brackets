@@ -32,6 +32,9 @@ const bracketSchema = new Schema({
         round: {
             type: Number,
             required: true,
+        },
+        group: {
+            
         }
 
 },
