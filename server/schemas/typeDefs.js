@@ -22,8 +22,11 @@ type Bracket {
     seed: Int
     teams: String
     round: Int
-    
     title: String
+    group: [{
+        teamOne: { type: String },
+        teamTwo: { type: String}
+    }]
 }`
 
 
