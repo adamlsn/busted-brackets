@@ -1,4 +1,6 @@
 import { ApolloProvider,ApolloClient,InMemoryCache,createHTTPLink } from '@apollo/client';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 const httpLink = createHttpLink({
   uri: 'http://localhost:3001/graphql',
@@ -10,22 +12,15 @@ const client = new ApolloClient({
 });
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  <ApolloProvider client={client}>
+    <div>
+      <Header/>
+      <div>
+        Home content
+      </div>
+      <Footer/>
     </div>
+  </ApolloProvider>
   );
 }
 
