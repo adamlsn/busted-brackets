@@ -7,6 +7,7 @@ const{
 
 router
     .route("/")
+    .get(console.long("ROUTE WORKS"))
     .post(createUser);
 
 router

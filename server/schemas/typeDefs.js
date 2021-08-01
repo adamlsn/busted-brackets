@@ -26,9 +26,11 @@ type Bracket {
 }
 type Auth {
     token: ID!
-    user: User
+    user: User!
 }
 type Mutation {
+    login(email: String!, password: String!): Auth
+    createUser(user: String!, token: ID!): Auth
 }`
 
 
