@@ -15,6 +15,11 @@ type User {
     brackets: [Bracket]
 }
 
+type Auth {
+    token: ID!
+    user: User
+}
+
 type Bracket {
     _id: ID
     bracketLevel: String,
@@ -29,6 +34,8 @@ type Bracket {
 
 type Mutation {
     addBracket(creator: String, title: String, bracketLevel: String, createdAt: String, seed: Int, teams: String, round: Int): Bracket
+    login(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
 }`
 
 
