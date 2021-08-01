@@ -25,6 +25,10 @@ type Bracket {
     round: Int
     title: String
     group: [String]
+}
+
+type Mutation {
+    addBracket(creator: String, title: String, bracketLevel: String, createdAt: String, seed: Int, teams: String, round: Int): Bracket
 }`
 
 

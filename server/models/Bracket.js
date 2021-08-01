@@ -21,10 +21,6 @@ const bracketSchema = new Schema({
             type: Number,
             required: false,
         }, 
-        id: {
-            type: Number,
-            required: true,
-        },
         teams: {
             type: String,
             required: true,

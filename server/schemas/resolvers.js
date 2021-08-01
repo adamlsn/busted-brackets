@@ -16,6 +16,14 @@ const resolvers = {
      bracket: async (partent, args) => {
          return Bracket.find(args)
      }
+    }, 
+
+    Mutation: {
+        addBracket: async (parent, args) => {
+                const bracket = await Bracket.create(args);              
+                return bracket;
+            
+        }
     }
 }
 
