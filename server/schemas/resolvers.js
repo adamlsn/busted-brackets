@@ -16,7 +16,6 @@ const resolvers = {
      bracket: async (partent, args) => {
          return Bracket.find(args)
      }
-
     }
 }
 
