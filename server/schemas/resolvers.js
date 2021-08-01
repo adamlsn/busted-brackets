@@ -10,9 +10,13 @@ const resolvers = {
           return User.findOne({username})
           .select('-__v -password');
       },
-      bracket:async ()=>{
+      brackets:async ()=>{
           return Bracket.find()
-      }
+      },
+     bracket: async (partent, args) => {
+         return Bracket.find(args)
+     }
+
     }
 }
 

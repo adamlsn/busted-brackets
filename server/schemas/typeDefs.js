@@ -4,7 +4,8 @@ const typeDefs = gql`
 type Query {
     users:[User]
     user(username: String!): User
-    bracket(title: String): [Bracket!]
+    brackets(title: String): [Bracket!]
+    bracket(creator: String, title: String): [Bracket]
     
 }
 type User {
