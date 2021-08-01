@@ -47,7 +47,7 @@ a {
 }
 
 .footer h2 {
-  color: #000000;
+  color: white;
   font-size: 12px;
   margin: 0;
 }
@@ -55,6 +55,7 @@ a {
 footer div {
   line-height: 1.5;
   text-align: right;
+  color: white;
 }
 /* FOOTER STYLES END */
 
@@ -65,7 +66,7 @@ footer div {
 }
 
 .hero {
-  background-image: url("https://images.unsplash.com/photo-1573487482166-09cd477f7b3b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=562&q=80");
+  background-image: url("https://images.unsplash.com/photo-1588281345136-9893252095bd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZXhwbG9zaW9ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60");
   height: 800px;
   width: 100%;
   background-repeat: no-repeat;
@@ -78,4 +79,8 @@ footer div {
   padding: 10px 20px;
   color: black;
   margin: 10px;
+}
+
+.button-hero:hover {
+  opacity: 0.8;
 }

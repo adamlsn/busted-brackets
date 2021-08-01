@@ -11,9 +11,8 @@ import Footer from "./components/Footer";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { useState } from "react";
 
-function App({ match }) {
+function App() {
   const [page, setPage] = useState("landing");
-  console.log(window.location);
   return (
     <BrowserRouter>
       {window.location.pathname !== "/" && <Header />}
