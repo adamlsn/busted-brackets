@@ -65,6 +65,17 @@ footer div {
   color: cornflowerblue;
 }
 
+section {
+  border: none;
+  width: auto;
+  height: auto;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .hero {
   background-image: url("https://images.unsplash.com/photo-1588281345136-9893252095bd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZXhwbG9zaW9ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60");
   height: 800px;
@@ -79,8 +90,25 @@ footer div {
   padding: 10px 20px;
   color: black;
   margin: 10px;
+  justify-content: center;
 }
 
 .button-hero:hover {
   opacity: 0.8;
+}
+
+/* .button-hero {
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+} */
+
+.heroTitle {
+  position: relative;
+}
+
+h1 {
+  color: white;
+  margin: 0 auto;
+  text-align: center;
 }
