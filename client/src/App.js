@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
-import { useState } from "react";
 
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -25,8 +24,6 @@ const client = new ApolloClient({
 })
 
 function App({ match }) {
-  const [page, setPage] = useState("landing");
-  console.log(window.location);
   return (
   <ApolloProvider client={client}>
     <Router>
