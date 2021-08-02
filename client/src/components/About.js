@@ -8,33 +8,59 @@ function About(props) {
       fontSize: "22px",
     },
   };
-  const rounds: RoundProps[] = [
-    {
-      title: "Round one",
-      seeds: [
-        {
-          id: 1,
-          date: new Date().toDateString(),
-          teams: [{ name: "Team A" }, { name: "Team B" }],
-        },
-        {
-          id: 2,
-          date: new Date().toDateString(),
-          teams: [{ name: "Team C" }, { name: "Team D" }],
-        },
-      ],
-    },
-    {
-      title: "Round one",
-      seeds: [
-        {
-          id: 3,
-          date: new Date().toDateString(),
-          teams: [{ name: "Team A" }, { name: "Team C" }],
-        },
-      ],
-    },
-  ];
+
+  // const fakeDbStuff = [
+  //   { name: "Bucks" },
+  //   { name: "Cavs" },
+  //   { name: "Bulls" },
+  //   { name: "Pacers" },
+  // ];
+
+  // const roundsWithDBData: RoundProps[] = [
+  //   {
+  //     title: "round One",
+  //     seeds: [],
+  //   },
+  // ];
+
+  // for (let i = 0; i < fakeDbStuff.length; i += 2) {
+  //   const roundData = {
+  //     id: i,
+  //     date: new Date().toDateString(),
+  //     teams: [{ name: fakeDbStuff[i].name }, { name: fakeDbStuff[i + 1].name }],
+  //   };
+  //   roundsWithDBData[0].seeds.push(roundData);
+  // }
+
+  // console.log("ROunds with data!!", roundsWithDBData);
+
+  // const rounds: RoundProps[] = [
+  //   {
+  //     title: "Round one",
+  //     seeds: [
+  //       {
+  //         id: 1,
+  //         date: new Date().toDateString(),
+  //         teams: [{ name: "Team A" }, { name: "Team B" }],
+  //       },
+  //       {
+  //         id: 2,
+  //         date: new Date().toDateString(),
+  //         teams: [{ name: "Team C" }, { name: "Team D" }],
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     title: "Round one",
+  //     seeds: [
+  //       {
+  //         id: 3,
+  //         date: new Date().toDateString(),
+  //         teams: [{ name: "Team A" }, { name: "Team C" }],
+  //       },
+  //     ],
+  //   },
+  // ];
 
   return (
     <div style={{ textAlign: "center" }}>
@@ -54,7 +80,7 @@ function About(props) {
         Bracket examples that you can use/create when creating your brackets!!
       </p>
       <br></br>
-      <Bracket rounds={rounds} />
+      {/* <Bracket rounds={roundsWithDBData} /> */}
     </div>
   );
 }

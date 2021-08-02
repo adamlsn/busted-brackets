@@ -25,7 +25,6 @@ const client = new ApolloClient({
 });
 
 function App() {
-  //const [page, setPage] = useState("landing");
   return (
     <ApolloProvider client={client}>
       <Router>
