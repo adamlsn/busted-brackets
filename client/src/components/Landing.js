@@ -1,24 +1,34 @@
 import { Link } from "react-router-dom";
 
 function Landing() {
+  const myStyles = {
+    title: {
+      display: "inlineBlock",
+      marginTop: "18%",
+    },
+  };
   return (
-    <div
-      className="hero"
-      style={{
-        textAlign: "center",
-      }}
-    >
-      <h1 className="heroTitle">BUSTED BRACKETS</h1>
-      <div className="button-hero">
-        <Link to="/create">Create Profile</Link>
+    <section>
+      <div
+        className="hero"
+        style={{
+          textAlign: "center",
+        }}
+      >
+        <h1 style={myStyles.title} className="heroTitle">
+          <Link to="/about">BUSTED BRACKETS</Link>
+        </h1>
+        <div className="button-hero">
+          <Link to="/signup">Sign Up</Link>
+        </div>
+        <div className="button-hero">
+          <Link to="/login">Login</Link>
+        </div>
+        <div className="button-hero">
+          <Link to="/about">About</Link>
+        </div>
       </div>
-      <div className="button-hero">
-        <Link to="/login">Login</Link>
-      </div>
-      <div className="button-hero">
-        <Link to="/about">About</Link>
-      </div>
-    </div>
+    </section>
   );
 }
 
