@@ -5,7 +5,9 @@ type Query {
     me: User
     users:[User]
     user(username: String!): User
-    bracket(title: String): [Bracket!]    
+    brackets(title: String): [Bracket!]
+    bracket(creator: String, title: String): [Bracket]
+    
 }
 type User {
     _id:ID
@@ -13,6 +15,7 @@ type User {
     email:String
     brackets: [Bracket]
 }
+
 type Bracket {
     _id: ID
     bracketLevel: String,
@@ -24,13 +27,11 @@ type Bracket {
     title: String
     group: [String]
 }
-type Auth {
-    token: ID!
-    user: User!
-}
+
 type Mutation {
+    addBracket(creator: String, title: String, bracketLevel: String, createdAt: String, seed: Int, teams: String, round: Int): Bracket
     login(email: String!, password: String!): Auth
-    createUser(user: String!, token: ID!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
 }`
 
 

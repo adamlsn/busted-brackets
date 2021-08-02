@@ -1,4 +1,4 @@
-const { Schema, model, Mongoose } = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 const bracketSchema = new Schema({
         title: {
@@ -21,10 +21,6 @@ const bracketSchema = new Schema({
             type: Number,
             required: false,
         }, 
-        id: {
-            type: Number,
-            required: true,
-        },
         teams: {
             type: String,
             required: true,
