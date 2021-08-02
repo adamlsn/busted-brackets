@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 
 function Landing() {
+  const myStyles = {
+    title: {
+      display: "inlineBlock",
+      marginTop: "18%",
+    },
+  };
   return (
     <section>
       <div
@@ -9,9 +15,11 @@ function Landing() {
           textAlign: "center",
         }}
       >
-        <h1 className="heroTitle">BUSTED BRACKETS</h1>
+        <h1 style={myStyles.title} className="heroTitle">
+          <Link to="/about">BUSTED BRACKETS</Link>
+        </h1>
         <div className="button-hero">
-          <Link to="/create">Create Profile</Link>
+          <Link to="/signup">Sign Up</Link>
         </div>
         <div className="button-hero">
           <Link to="/login">Login</Link>

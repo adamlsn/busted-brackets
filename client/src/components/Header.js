@@ -11,16 +11,18 @@ function Header() {
   };
   return (
     <div className="header">
-      <h1>Busted Brackets</h1>
+      <h1>
+        <Link to="/about">BUSTED BRACKETS</Link>
+      </h1>
       <nav style={{ width: "19%" }}>
         <div style={styles.navItem}>
           <Link to="/about">About</Link>
         </div>
         <div style={styles.navItem}>
-          <Link to="/profile">Profile</Link>
+          <Link to="/profile/tom">Profile</Link>
         </div>
         <div style={styles.navItem}>
-          <Link to="/create">Create</Link>
+          <Link to="/signup">Create</Link>
         </div>
         <div style={styles.navItem}>
           <Link to="/login">Login</Link>
