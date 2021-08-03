@@ -27,6 +27,9 @@ function Header() {
         <div style={styles.navItem}>
           <Link to="/login">Login</Link>
         </div>
+        <dvi style={styles.navItem}>
+          <Link to="/bracket">Bracket Generator</Link>
+        </dvi>
       </nav>
     </div>
   );
