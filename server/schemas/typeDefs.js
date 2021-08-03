@@ -16,6 +16,11 @@ type User {
     brackets: [Bracket]
 }
 
+type Auth {
+    token: ID!
+    user: User
+}
+
 type Bracket {
     _id: ID
     bracketLevel: String,

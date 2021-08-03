@@ -8,6 +8,7 @@ import Header from "./components/Header";
 
 import Landing from "./components/Landing";
 import About from "./components/About";
+import Bracket from "./components/bracket";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Signup from "./pages/Signup";
@@ -25,7 +26,6 @@ const client = new ApolloClient({
 });
 
 function App() {
-  //const [page, setPage] = useState("landing");
   return (
     <ApolloProvider client={client}>
       <Router>
@@ -36,6 +36,7 @@ function App() {
               <Route exact path="/" component={Landing} />
               <Route exact path="/about" component={About} />
               <Route exact path="/login" component={Login} />
+              <Route exact path="/bracket" component={Bracket} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/profile/:username?" component={Profile} />
             </Switch>
