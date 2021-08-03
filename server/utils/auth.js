@@ -4,6 +4,27 @@ const secret = 'secretsercetIvegotasecret';
 const expiration = '96h';
 
 module.exports = {
+    authMiddlewre: function({ req }) {
+        let token = req.body.token || req.query.token || req.headers.authorization;
+
+        if (req.headers.authorization) {
+            token=token
+            .trim()
+            .split(' ');
+        }
+
+        if (!token) {
+            return req;
+        }
+
+        try {
+            const { data } = jwt.verify(token, secret, { maxAge: expiration });
+            req.user = data;
+        } catch {
+            console.log('invalid token');
+        }
+        return req;
+    },
     signToken: function ({ username, email, _id}) {
         const payload = { username, email, _id};
 
