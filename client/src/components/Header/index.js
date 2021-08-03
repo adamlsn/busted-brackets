@@ -23,6 +23,9 @@ const Header = () => {
                             <Link  className="nav-link" to="/profile">Profile</Link>
                             </li>
                             <li className="nav-item">
+                                    <Link className="nav-link" to="/bracket">Create a Bracket</Link>
+                                </li>
+                            <li className="nav-item">
                             <a className="nav-link" href="/" onClick={logout}>
 
                                 Logout
@@ -40,9 +43,7 @@ const Header = () => {
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/about">About Us</Link>
                                 </li>
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/bracket">Create a Bracket</Link>
-                                </li>
+                              
                          </>
                         )}
                         </ul>
