@@ -20,7 +20,7 @@ const Header = () => {
                     {Auth.loggedIn() ? (
                         <>  
                             <li className="nav-item">
-                            <Link  className="nav-link" to="/profile">Me</Link>
+                            <Link  className="nav-link" to="/profile">Profile</Link>
                             </li>
                             <li className="nav-item">
                             <a className="nav-link" href="/" onClick={logout}>
@@ -36,6 +36,12 @@ const Header = () => {
                                 </li>
                                 <li className="nav-item">
                                 <Link className="nav-link" to="/signup">Signup</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/about">About Us</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/bracket">Create a Bracket</Link>
                                 </li>
                          </>
                         )}
