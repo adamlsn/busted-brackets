@@ -9,9 +9,11 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 
 import Home from './pages/Home';
+import About from './pages/About';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup'
+import Bracket from './pages/Bracket';
 
 const client = new ApolloClient({
   request:operation => {
@@ -37,9 +39,11 @@ function App() {
         <div className="inner">
         <Switch>
        <Route exact path="/" component={Home} />
+       <Route exact path="/about" component={About}/>
        <Route exact path="/login" component={Login}/>
        <Route exact path="/signup" component={Signup}/>
        <Route exact path="/profile/:username?" component={Profile}/>
+       <Route exact path="/bracket" component={Bracket}/>
         </Switch>
         </div>
         </div>

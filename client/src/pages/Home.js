@@ -3,10 +3,10 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <main>
+        <main >
             <div>
                 <div>
-                    <div>Loading...</div>
+                    <div ></div>
                 </div>
             </div>
         </main>
