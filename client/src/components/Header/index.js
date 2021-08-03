@@ -11,8 +11,8 @@ const Header = () => {
     return (
         <header className="bg-secondary mb-4 py-2 flex-row align-center">
             <div className="">
-                <Link to="/">
-                    <h1>Busted Brackets</h1>
+                <Link className="navbar-brand" to="/">
+                    Busted Brackets
                 </Link>
                 <nav className="navbar navbar-expand-lg navbar-light">
                     <div className="container">
@@ -20,8 +20,10 @@ const Header = () => {
                     {Auth.loggedIn() ? (
                         <>  
                             <li className="nav-item">
-                            <Link className="nav-link" to="/profile">Me</Link>
-                            <a href="/" onClick={logout}>
+                            <Link  className="nav-link" to="/profile">Me</Link>
+                            </li>
+                            <li className="nav-item">
+                            <a className="nav-link" href="/" onClick={logout}>
 
                                 Logout
                             </a>
