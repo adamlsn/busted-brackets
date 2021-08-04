@@ -1,33 +1,32 @@
 const jwt = require('jsonwebtoken');
 
-const secret = 'secretsercetIvegotasecret';
+const secret = 'mysecrettt';
 const expiration = '96h';
 
 module.exports = {
-    authMiddlewre: function({ req }) {
+    signToken: function({username,email,_id}){
+        const payload = {username,email,_id};
+
+        return jwt.sign({data:payload},secret,{expiresIn:expiration});
+    },
+    authMiddleware: function({ req }){
         let token = req.body.token || req.query.token || req.headers.authorization;
 
-        if (req.headers.authorization) {
-            token=token
-            .trim()
-            .split(' ');
+        if(req.headers.authorization){
+            token = token
+            .split(' ')
+            .pop()
+            .trim();
         }
-
-        if (!token) {
+        if(!token){
             return req;
         }
-
         try {
-            const { data } = jwt.verify(token, secret, { maxAge: expiration });
+            const { data } = jwt.verify(token,secret,{maxAge:expiration});
             req.user = data;
         } catch {
-            console.log('invalid token');
+            console.log('Wrong Token')
         }
         return req;
-    },
-    signToken: function ({ username, email, _id}) {
-        const payload = { username, email, _id};
-
-        return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
     }
 }
