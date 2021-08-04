@@ -1,70 +1,44 @@
 * {
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   min-height: 100vh;
-  min-width: 100vw;
+  display: flex;
+  font-weight: 300;
+  font-family: sans-serif;
 }
 
-#root {
-  --primary-color: #c9d5b5;
+body,html,.App,#root,.outer {
+  width:100%;
   height: 100%;
-  width: 100%;
 }
 
-.header {
-  padding: 20px 35px;
-  background-color: #4e3d42;
+.outer {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
 }
 
-.header nav {
-  margin: 7px 0;
+.inner {
+  width: 450px;
+  margin: auto;
+  border-radius: 15px;
 }
 
-.header h1 {
-  font-weight: bold;
-  font-size: 36px;
-  color: var(--primary-color);
-  margin: 0;
-}
-a {
-  text-decoration: none;
-  color: white;
+.outer .form-control:focus {
+  border-color: #3333;
+  box-shadow: none;
 }
 
-.footer {
-  background: var(--primary-color);
-  padding: 40px 35px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 100%;
-}
 
-.footer h2 {
-  color: white;
-  font-size: 12px;
-  margin: 0;
+.outer h3 {
+  text-align:center;
+  margin:0;
+  line-height: 1;
+  padding-bottom: 20px;
 }
-
-footer div {
-  line-height: 1.5;
-  text-align: right;
-  color: white;
-}
-/* FOOTER STYLES END */
-
-.pageHeader {
-  font-size: 70px;
-  text-align: center;
-  color: cornflowerblue;
-}
-
 section {
   border: none;
   width: auto;
@@ -83,7 +57,9 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.heroTitle {
+  position: relative;
+}
 .button-hero {
   margin: 2%;
 }
@@ -101,22 +77,27 @@ section {
   opacity: 0.8;
 }
 
-/* .button-hero {
-  display: flex;
-  justify-content: center;
-  flex-direction: column-reverse;
-} */
-
-.heroTitle {
-  position: relative;
+.content {
+  padding: 20px;
 }
-
-h1 {
-  color: white;
-  margin: 0 auto;
-  text-align: center;
+ 
+.header {
+  padding: 10px;
+  background: #edf2f4;
+  border-bottom: 1px solid #999;
 }
-
-h2 {
-  color: white;
+.header a {
+  color: #0072ff;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 5px;
+}
+.header a:hover {
+  color: #8a0f53;
+}
+.header small {
+  color: #666;
+}
+.header .active {
+  color: #2c7613;
 }

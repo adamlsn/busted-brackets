@@ -10,25 +10,44 @@ const Header = () => {
     }
     return (
         <header className="bg-secondary mb-4 py-2 flex-row align-center">
-            <div className="container flex-row justify-space-between-lg justify-center align-center">
-                <Link to="/">
-                    <h1>Busted Brackets</h1>
+            <div className="">
+                <Link className="navbar-brand" to="/">
+                    Busted Brackets
                 </Link>
-                <nav className="text-center">
+                <nav className="navbar navbar-expand-lg navbar-light">
+                    <div className="container">
+                    <ul className="navbar-nav ml-auto">
                     {Auth.loggedIn() ? (
-                        <>
-                            <Link to="/profile">Me</Link>
-                            <a href="/" onClick={logout}>
+                        <>  
+                            <li className="nav-item">
+                            <Link  className="nav-link" to="/profile">Profile</Link>
+                            </li>
+                            <li className="nav-item">
+                                    <Link className="nav-link" to="/bracket">Create a Bracket</Link>
+                                </li>
+                            <li className="nav-item">
+                            <a className="nav-link" href="/" onClick={logout}>
 
                                 Logout
                             </a>
+                            </li>
                         </>
                                  ) : (
-                         <>
-                                <Link to="/login">Login</Link>
-                                <Link to="/signup">Signup</Link>
+                         <>     
+                                <li className="nav-item">
+                                <Link className="nav-link" to="/login">Login</Link>
+                                </li>
+                                <li className="nav-item">
+                                <Link className="nav-link" to="/signup">Signup</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/about">About Us</Link>
+                                </li>
+                              
                          </>
                         )}
+                        </ul>
+                        </div>
                 </nav>
             </div>
         </header>
