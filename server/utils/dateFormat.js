@@ -1,20 +1,20 @@
 const addDateSuffix = date => {
-  let dateStr = date.toString();
+  let dateString = date.toString();
 
   // get last char of date string
-  const lastChar = dateStr.charAt(dateStr.length - 1);
+  const lastChar = dateString.charAt(dateString.length - 1);
 
-  if (lastChar === '1' && dateStr !== '11') {
-    dateStr = `${dateStr}st`;
-  } else if (lastChar === '2' && dateStr !== '12') {
-    dateStr = `${dateStr}nd`;
-  } else if (lastChar === '3' && dateStr !== '13') {
-    dateStr = `${dateStr}rd`;
+  if (lastChar === '1' && dateString !== '11') {
+    dateString = `${dateString}st`;
+  } else if (lastChar === '2' && dateString !== '12') {
+    dateString = `${dateString}nd`;
+  } else if (lastChar === '3' && dateString !== '13') {
+    dateString = `${dateString}rd`;
   } else {
-    dateStr = `${dateStr}th`;
+    dateString = `${dateString}th`;
   }
 
-  return dateStr;
+  return dateString;
 };
 
 // function to format a timestamp, accepts the timestamp and an `options` object as parameters
@@ -38,30 +38,30 @@ module.exports = (
     11: monthLength === 'short' ? 'Dec' : 'December'
   };
 
-  const dateObj = new Date(timestamp);
-  const formattedMonth = months[dateObj.getMonth()];
+  const dateObject = new Date(timestamp);
+  const formattedMonth = months[dateObject.getMonth()];
 
-  const dayOfMonth = dateSuffix
-    ? addDateSuffix(dateObj.getDate())
-    : dateObj.getDate();
+  const dayNum = dateSuffix
+    ? addDateSuffix(dateObject.getDate())
+    : dateObject.getDate();
 
-  const year = dateObj.getFullYear();
-  let hour =
-    dateObj.getHours() > 12
-      ? Math.floor(dateObj.getHours() / 2)
-      : dateObj.getHours();
+  const year = dateObject.getFullYear();
+  let hr =
+    dateObject.getHours() > 12
+      ? Math.floor(dateObject.getHours() / 2)
+      : dateObject.getHours();
 
   // if hour is 0 (12:00am), change it to 12
-  if (hour === 0) {
-    hour = 12;
+  if (hr === 0) {
+    hr = 12;
   }
 
-  const minutes = dateObj.getMinutes();
+  const min = dateObject.getMinutes();
 
   // set `am` or `pm`
-  const periodOfDay = dateObj.getHours() >= 12 ? 'pm' : 'am';
+  const dayHalf = dateObject.getHours() >= 12 ? 'pm' : 'am';
 
-  const formattedTimeStamp = `${formattedMonth} ${dayOfMonth}, ${year} at ${hour}:${minutes} ${periodOfDay}`;
+  const formattedTimeStamp = `${formattedMonth} ${dayNum}, ${year} at ${hr}:${min} ${dayHalf}`;
 
   return formattedTimeStamp;
 };
