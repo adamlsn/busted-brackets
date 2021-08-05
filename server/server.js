@@ -23,10 +23,9 @@ app.use(express.json());
 
 // Serve up static assets
 
-app.get('*', function (req, res) {
-  const index = path.join(__dirname, 'client','build', 'index.html');
-  res.sendFile(index);
-});
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+ });
 
 db.once('open', () => {
   app.listen(PORT, () => {
