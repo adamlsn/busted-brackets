@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../../utils/auth';
 
-
 const Header = () => {
     const logout = event => {
         event.preventDefault();
@@ -10,13 +9,13 @@ const Header = () => {
     }
     return (
         <header className="bg-secondary mb-4 py-2 flex-row align-center">
-            <div className="">
-                <Link className="navbar-brand" to="/">
+            <div className="container-fluid">
+                <Link className="navbar-brand h1" to="/">
                     Busted Brackets
                 </Link>
                 <nav className="navbar navbar-expand-lg navbar-light">
                     <div className="container">
-                    <ul className="navbar-nav ml-auto">
+                    <ul className="navbar-nav ml-auto link-container">
                     {Auth.loggedIn() ? (
                         <>  
                             <li className="nav-item">

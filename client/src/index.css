@@ -1,3 +1,14 @@
+:root {
+  --important: #8E9B90;
+  --interact: #7D80DA;
+  --dark: #363946;
+  --light: #FFE4F3;
+  --yellow: #FFE45E;
+  --orange: #EE964B;
+  --hover: #B89900;
+
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +23,7 @@ body {
 }
 
 body,html,.App,#root,.outer {
-  width:100%;
+  width: 100%;
   height: 100%;
 }
 
@@ -34,41 +45,42 @@ body,html,.App,#root,.outer {
   box-shadow: none;
 }
 
-
 .outer h3 {
   text-align:center;
   margin:0;
   line-height: 1;
   padding-bottom: 20px;
 }
+
 section {
   border: none;
   width: auto;
   height: auto;
-}
-
-section {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .hero {
   background-image: url("https://images.unsplash.com/photo-1588281345136-9893252095bd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZXhwbG9zaW9ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60");
   height: 800px;
   width: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
 }
+
 .heroTitle {
-  position: relative;
+  color: var(--dark);
+  z-index: 999;
 }
+
 .button-hero {
-  margin: 2%;
+  margin: 30px;
+  z-index: 999;
 }
 
 .button-hero > a {
   background-color: white;
-  border: 2px solid yellow;
+  border: 2px solid var(--interact);
   padding: 10px 20px;
   color: black;
   margin: 10px;
@@ -79,22 +91,38 @@ section {
   opacity: 0.8;
 }
 
-/* .button-hero {
+.content {
+  padding: 20px;
+}
+ 
+header {
+  padding: 10px;
+  background: var(--important);
+  border-bottom: 1px solid var(--important);
   display: flex;
   justify-content: center;
-  flex-direction: column-reverse;
-} */
-
-.heroTitle {
-  position: relative;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-h1 {
-  color: white;
-  margin: 0 auto;
-  text-align: center;
+header a {
+  color: var(--yellow);
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 5px;
+  font-size: 20px;
+  display: flex;
 }
 
-h2 {
-  color: white;
+header a:hover {
+  color: var(--hover);
+}
+
+header small {
+  color: var(--important);
+}
+
+header .active {
+  color: var(--dark);
 }
