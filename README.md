@@ -34,6 +34,7 @@ Users can create a profile to being enjoying the Busted Brackets experience. Whe
 * Devon Ross = https://github.com/dr-50
 * Kaan Nazlioz - https://github.com/nazliozemrek
 * Luca Wicklund - https://github.com/csr-ph
+* Mitchell Spierings - https://github.com/mspierings
 
 ## Website:
 Github Repo - 
