@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -77,27 +79,22 @@ section {
   opacity: 0.8;
 }
 
-.content {
-  padding: 20px;
+/* .button-hero {
+  display: flex;
+  justify-content: center;
+  flex-direction: column-reverse;
+} */
+
+.heroTitle {
+  position: relative;
 }
- 
-.header {
-  padding: 10px;
-  background: #edf2f4;
-  border-bottom: 1px solid #999;
+
+h1 {
+  color: white;
+  margin: 0 auto;
+  text-align: center;
 }
-.header a {
-  color: #0072ff;
-  text-decoration: none;
-  margin-left: 20px;
-  margin-right: 5px;
-}
-.header a:hover {
-  color: #8a0f53;
-}
-.header small {
-  color: #666;
-}
-.header .active {
-  color: #2c7613;
+
+h2 {
+  color: white;
 }
