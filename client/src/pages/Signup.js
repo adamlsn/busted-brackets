@@ -34,9 +34,9 @@ const Signup = () => {
             <div className="col-12 col-md-6">
                 <div className="card">
                     <h4 className="card-header">Sign Up</h4>
-                    <form onSubmit={handleFormSubmit}>
+                    <form  className="form-group" onSubmit={handleFormSubmit}>
                         <input
-                        className="form-input"
+                        className="form-control"
                         placeholder="Your username"
                         name="username"
                         type="username"
@@ -45,7 +45,7 @@ const Signup = () => {
                         onChange={handleChange}
                         />
                         <input
-                          className="form-input"
+                          className="form-control"
                           placeholder="Your email"
                           name="email"
                           type="email"
@@ -54,14 +54,15 @@ const Signup = () => {
                           onChange={handleChange}
                           />  
                         <input
-                        className="form-input"
+                        className="form-control"
+                        placeholder="Your password"
                         name="password"
                         type="password"
                         id="password"
                         value={formState.password}
                         onChange={handleChange}
                         />
-                        <button className="btn d-block w-100" type="submit">
+                        <button className="btn btn-dark btn-lg btn-block" type="submit">
                             Submit
                             </button> 
 
