@@ -3,7 +3,8 @@
 ## Description:
 A user interactive website to generate brackets. By selecting different types of brackets the user can generate a bracket for any tournament they desire. 
 
-![screenshot](./client/public/images/homepage.JPG)
+![screenshot](./client/public/images/homepage.png)
+![screenshot](./client/public/images/bracket.png)
 
 Built With: 
 * react
@@ -34,9 +35,10 @@ Users can create a profile to being enjoying the Busted Brackets experience. Whe
 * Devon Ross - https://github.com/dr-50
 * Kaan Nazlioz - https://github.com/nazliozemrek
 * Luca Wicklund - https://github.com/csr-ph
+* Mitchell Spierings - https://github.com/mspierings96
 
 ## Website:
 Github Repo - https://limitless-wildwood-05739.herokuapp.com/
 https://github.com/adamlsn/busted-brackets
 
-Live Site -
+Live Site - https://limitless-wildwood-05739.herokuapp.com/
