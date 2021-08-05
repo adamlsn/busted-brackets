@@ -39,12 +39,21 @@ function Generator(props) {
       };
 
       let numberOfTeamsInRound = numberOfTeams / Math.pow(2, i + 1);
-      for (let j = 0; j < numberOfTeamsInRound; j++) {
-        let seed = {
-          id: i * numberOfTeams + j,
+      for (let j = 0; j < chosenTeams.length - 1; j += 1) {
+        let seed;
+        if (i === 0) {
+          seed = {
+            id: i * numberOfTeams + j,
 
-          teams: [{ name: "" }, { name: "" }],
-        };
+            teams: [{ name: chosenTeams[j] }, { name: chosenTeams[j + 1] }],
+          };
+        } else {
+          seed = {
+            id: i * numberOfTeams + j,
+
+            teams: [{ name: "" }, { name: "" }],
+          };
+        }
 
         round.seeds.push(seed);
       }

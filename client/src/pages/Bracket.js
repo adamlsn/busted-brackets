@@ -103,9 +103,6 @@ function Generator(props) {
       <div className="seed-form-wrapper">{generateForm()}</div>
       <button
         onClick={async () => {
-          //Call the create bracket mutation
-
-          //Create a string out of the team names array
           let teamsString = teamsArray.join(",");
 
           let token = localStorage.getItem("id_token");
