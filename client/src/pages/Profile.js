@@ -4,7 +4,6 @@ import { Redirect, useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 import Auth from '../utils/auth';
-
 const Profile = props => {
     const { username: userParam } = useParams();
 
