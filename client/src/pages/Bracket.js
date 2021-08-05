@@ -5,64 +5,6 @@ import { Bracket } from "react-brackets";
 function Generator(props) {
   const [numberOfTeams, setNumberOfTeams] = useState(0);
 
-  {
-    /*const style = {
-    text: {
-      width: "40%",
-      margin: "auto",
-      fontSize: "22px",
-    },
-  };
-  const fakeDbStuff = [
-    { name: "Bucks" },
-    { name: "Cavs" },
-    { name: "Bulls" },
-    { name: "Pacers" },
-  ];
-  const roundsWithDBData = [
-    {
-      title: "round One",
-      seeds: [],
-    },
-  ];
-  for (let i = 0; i < fakeDbStuff.length; i += 2) {
-    const roundData = {
-      id: i,
-      date: new Date().toDateString(),
-      teams: [{ name: fakeDbStuff[i].name }, { name: fakeDbStuff[i + 1].name }],
-    };
-    roundsWithDBData[0].seeds.push(roundData);
-  }
-  console.log("ROunds with data!!", roundsWithDBData);
-  const rounds = [
-    {
-      title: "Round one",
-      seeds: [
-        {
-          id: 1,
-          date: new Date().toDateString(),
-          teams: [{ name: "Team A" }, { name: "Team B" }],
-        },
-        {
-          id: 2,
-          date: new Date().toDateString(),
-          teams: [{ name: "Team C" }, { name: "Team D" }],
-        },
-      ],
-    },
-    {
-      title: "Round one",
-      seeds: [
-        {
-          id: 3,
-          date: new Date().toDateString(),
-          teams: [{ name: "Team A" }, { name: "Team C" }],
-        },
-      ],
-    },
-  ];*/
-  }
-
   let makeRounds = () => {
     let numberOfRounds = Math.cbrt(numberOfTeams) + 1;
 
