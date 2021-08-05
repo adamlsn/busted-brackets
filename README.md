@@ -31,12 +31,12 @@ Users can create a profile to being enjoying the Busted Brackets experience. Whe
 
 ## Credits
 * Adam Olson - https://github.com/adamlsn
-* Devon Ross = https://github.com/dr-50
+* Devon Ross - https://github.com/dr-50
 * Kaan Nazlioz - https://github.com/nazliozemrek
 * Luca Wicklund - https://github.com/csr-ph
 
 ## Website:
-Github Repo - 
+Github Repo - https://limitless-wildwood-05739.herokuapp.com/
 https://github.com/adamlsn/busted-brackets
 
 Live Site -
