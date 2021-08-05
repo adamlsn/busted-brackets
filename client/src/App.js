@@ -2,13 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-
-import Footer from './components/Footer';
-import Header from './components/Header';
 
 import Home from './pages/Home';
 import About from './pages/About';
