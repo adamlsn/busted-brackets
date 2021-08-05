@@ -7,15 +7,12 @@ import Auth from '../utils/auth';
 
 const Profile = props => {
     const { username: userParam } = useParams();
-   console.log(userParam);
-
 
     const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
         variables: { username: userParam }
     });
 
     const user = data?.me || data?.users || {};
-    console.log(Auth.loggedIn())
     if (
         Auth.loggedIn() &&
         Auth.getProfile().data.username === userParam
@@ -26,7 +23,6 @@ const Profile = props => {
     if (loading) {
         return <div>Loading...</div>
     }
-    console.log(user?.username)
     if(!Auth.loggedIn()){
         return (
             <h4>

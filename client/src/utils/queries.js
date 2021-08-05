@@ -1,5 +1,7 @@
 import { gql } from '@apollo/client';
 
+
+// to get the user variables
 export const QUERY_USER = gql`
 query user($username:String!){
     user(username:$username){
