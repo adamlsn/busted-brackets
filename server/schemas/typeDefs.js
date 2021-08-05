@@ -1,29 +1,28 @@
-const { gql } = require('apollo-server-express');
+const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
-type Query {
+  type Query {
     me: User
-    users:[User]
+    users: [User]
     user(username: String!): User
     brackets(title: String): [Bracket!]
     bracket(creator: String, title: String): [Bracket]
-    
-}
-type User {
-    _id:ID
-    username:String
-    email:String
+  }
+  type User {
+    _id: ID
+    username: String
+    email: String
     brackets: [Bracket]
-}
+  }
 
-type Auth {
+  type Auth {
     token: ID!
     user: User
-}
+  }
 
-type Bracket {
+  type Bracket {
     _id: ID
-    bracketLevel: String,
+    bracketLevel: String
     creator: String
     createdAt: String
     seed: Int
@@ -31,13 +30,13 @@ type Bracket {
     round: Int
     title: String
     group: [String]
-}
+  }
 
-type Mutation {
-    addBracket(creator: String, title: String, bracketLevel: String, createdAt: String, seed: Int, teams: String, round: Int): Bracket
+  type Mutation {
+    addBracket(creator: String, teams: String): Bracket
     login(email: String!, password: String!): Auth
-    addUser(username: String!, email: String!, password: String!): Auth
-}`
-
+    createUser(username: String!, email: String!, password: String!): Auth
+  }
+`;
 
 module.exports = typeDefs;

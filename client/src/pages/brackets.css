@@ -1,0 +1,32 @@
+.seed-form-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.seed-form-wrapper .seed-label {
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.seed-form-wrapper .seed-wrapper {
+  flex: 0 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px;
+  border-radius: 10px;
+  border: solid 2px black;
+
+  margin: 20px;
+}
+
+.seed-form-wrapper .seed-wrapper input {
+  width: 200px;
+  height: 45px;
+}

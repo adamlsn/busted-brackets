@@ -4,20 +4,41 @@ import { Bracket } from "react-brackets";
 
 function Generator(props) {
   const [numberOfTeams, setNumberOfTeams] = useState(0);
-
+  const [chosenTeams, setChosenTeams] = useState([
+    "Packers",
+    "Bears",
+    "Lions",
+    "Vikings",
+    "Chiefs",
+    "Colts",
+    "Titans",
+    "Steelers",
+  ]);
   let makeRounds = () => {
     let numberOfRounds = Math.cbrt(numberOfTeams) + 1;
 
     let rounds = [];
 
-    for (let i = 0; i < numberOfRounds; i++) {
+    let roundOne = { title: "Round 1", seeds: [] };
+
+    for (let i = 0; i < chosenTeams.length - 1; i += 2) {
+      let seed = {
+        id: i,
+
+        teams: [{ name: chosenTeams[i] }, { name: chosenTeams[i + 1] }],
+      };
+      roundOne.seeds.push(seed);
+    }
+
+    rounds.push(roundOne);
+
+    for (let i = 1; i < numberOfRounds; i++) {
       let round = {
         title: `Round ${i + 1}`,
         seeds: [],
       };
 
       let numberOfTeamsInRound = numberOfTeams / Math.pow(2, i + 1);
-
       for (let j = 0; j < numberOfTeamsInRound; j++) {
         let seed = {
           id: i * numberOfTeams + j,
