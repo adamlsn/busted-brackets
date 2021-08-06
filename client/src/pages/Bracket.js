@@ -33,7 +33,6 @@ function Generator(props) {
     };
     roundsWithDBData[0].seeds.push(roundData);
   }
-  console.log("ROunds with data!!", roundsWithDBData);
   const rounds = [
     {
       title: "Round one",
@@ -91,8 +90,6 @@ function Generator(props) {
 
     return rounds;
   };
-
-  console.log(makeRounds());
 
   return (
     <div style={{ textAlign: "center" }}>

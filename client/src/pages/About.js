@@ -1,13 +1,6 @@
 import { Bracket, RoundProps } from "react-brackets";
 
 function About(props) {
-  const style = {
-    text: {
-      width: "40%",
-      margin: "auto",
-      fontSize: "22px",
-    },
-  };
 
   const fakeDbStuff = [
     { name: "Bucks" },
@@ -63,19 +56,19 @@ function About(props) {
   ];
 
   return (
-    <div style={{ textAlign: "center" }}>
+    <div>
       <h2 className="pageHeader">About Busted Brackets</h2>
       <br></br>
-      <p style={style.text}>
+      <h4>
         Hello! Thank you for visiting Busted Brackets! This site is a user
         friendly/interactive site for generating brackets, for whatever purpose
         you may have! You can select from several differnet types of brackets,
         and invite your friends to join/edit the brackets for your pre
         determined purposes. Please go ahead and make sure you are logged in, or
         have created a profile! Happy Bracket Busting!!
-      </p>
+      </h4>
       <br></br>
-      <p style={style.text}>
+      <p>
         Please see the below brackets. Please consider these as a few different
         Bracket examples that you can use/create when creating your brackets!!
       </p>

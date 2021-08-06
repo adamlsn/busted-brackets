@@ -1,9 +1,11 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, Mongoose } = require('mongoose');
+const timestamp = require('../utils/dateFormat');
 
 const bracketSchema = new Schema({
         title: {
             type: String,
             require: true,
+            unique: true,
         },
         bracketLevel: {
             type: String,
@@ -15,12 +17,18 @@ const bracketSchema = new Schema({
         },
         createdAt: {
             type: Date,
-            default: Date.now
+            default: Date.now,
+            get: timestamp
         },
         seed:  {
             type: Number,
             required: false,
         }, 
+        id: {
+            type: Number,
+            required: true,
+            unique: true
+        },
         teams: {
             type: String,
             required: true,
