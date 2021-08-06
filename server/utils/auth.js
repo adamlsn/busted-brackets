@@ -5,10 +5,14 @@ const expiration = '96h';
 
 module.exports = {
     signToken: function({username,email,_id}){
+        // To create a token 
         const payload = {username,email,_id};
 
+
+        // assignen jwt 
         return jwt.sign({data:payload},secret,{expiresIn:expiration});
     },
+    // to use token as context 
     authMiddleware: function({ req }){
         let token = req.body.token || req.query.token || req.headers.authorization;
 

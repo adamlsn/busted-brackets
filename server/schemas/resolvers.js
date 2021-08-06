@@ -23,6 +23,7 @@ const resolvers = {
       },
       brackets:async ()=>{
           return Bracket.find()
+         
       },
      bracket: async (partent, args) => {
          return Bracket.find(args)

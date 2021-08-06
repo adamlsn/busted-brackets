@@ -48,7 +48,9 @@ const Profile = props => {
                     </button>
 
             </div>
+            
         </div>
+        
     )
 }
 export default Profile;
